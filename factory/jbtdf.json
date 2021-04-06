@@ -1,0 +1,9 @@
+{
+	"name": "jbtdf",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7878c922-401c-4410-a6c1-4d18ae8fbd05",
+		"tenantId": "142a8c0d-f4f8-4075-9e95-8c7b13fedb8f"
+	}
+}
