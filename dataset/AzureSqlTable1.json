@@ -2,12 +2,21 @@
 	"name": "AzureSqlTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabasesrcLS",
+			"referenceName": "AzureSqlDatabasesink",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TableName"
+		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }

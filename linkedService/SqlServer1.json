@@ -1,0 +1,35 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"servername": {
+				"type": "String",
+				"defaultValue": "LAPTOP-P9RJ4V60\\JBTEJA"
+			},
+			"username": {
+				"type": "String",
+				"defaultValue": "LAPTOP-P9RJ4V60\\Teja"
+			},
+			"database": {
+				"type": "String",
+				"defaultValue": "AdventureWorks2012"
+			},
+			"password": {
+				"type": "String",
+				"defaultValue": "jbjbjbjb"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=True;Data Source=@{linkedService().servername};Initial Catalog=@{linkedService().database}",
+			"userName": "@{linkedService().username}",
+			"password": "@{linkedService().password}"
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
